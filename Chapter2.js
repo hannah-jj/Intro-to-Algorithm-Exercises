@@ -32,7 +32,7 @@ function mergeSort(array, p, r){
 		var q = Math.floor((p+r)/2);
 		mergeSort(array, p, q);
 		mergeSort(array, q+1, r);
-		merge(array, p, q, r);
+		merge1(array, p, q, r);
 	}
 }
 
@@ -61,6 +61,25 @@ function merge(array, p, q, r){
 	
 }
 
-var arrayMerge = [27, 26, 5, 45, 9, 11, 13, 3, 4, 16, 28, 10, 34];
+//variation of merge method without using sentinel
+function merge1(array, p, q, r){
+	var left = array.slice(p, q+1);
+	var right = array.slice(q+1, r+1);
+	var k = p;
+
+	while (left.length != 0 && right.length != 0){
+		left[0] <= right[0] ? array[k] = left.shift() : array[k] = right.shift();
+		k++;
+	}
+
+	var leftover = left.concat(right);
+	while (k <= r) {
+		array[k] = leftover.shift();
+		k++;
+	}
+
+}
+
+var arrayMerge = [27, 26, 5, -45, 9, 11, 13, 3, 4, -16, 28, 10, 34];
 mergeSort(arrayMerge, 0, arrayMerge.length-1);
 console.log(arrayMerge);
