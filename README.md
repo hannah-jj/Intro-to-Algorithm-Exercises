@@ -5,4 +5,4 @@ All exercies are written in javascript
 
 Copy to console in your browser or node filename.js to see the codes running
 
-1. Chapter 2 : Insertion Sort
+1. Chapter 2 : Insertion Sort & Merge Sort
