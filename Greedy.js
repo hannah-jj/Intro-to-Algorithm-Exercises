@@ -96,3 +96,92 @@ var arr4 = [1, 10, -5, 1, -100];
 console.log(findMaxProduct(arr4));
 //5000
 
+//#4
+//merge meeting time
+// each time block means 30 min block since 9am
+//should be generalizd to work in all format
+//O(n^2)
+function mergeTime(timeArray) {
+	//find if a time is merged
+	var result = [timeArray[0]];
+	for (var i = 1; i < timeArray.length; i ++){
+		var merged = false;
+		for (var j = 0; j < result.length; j ++){
+			var tempTime = overlap(result[j], timeArray[i]);
+			if (tempTime !== false) {
+				result[j] = tempTime;
+				merged = true;
+				break;
+			}
+		}
+		if (!merged) { result.push(timeArray[i]); }
+	}
+	return result;
+}
+
+function overlap(time1, time2){
+	if ((time2.startTime <= time1.endTime) && (time2.endTime >= time1.startTime)) {
+		return {startTime: Math.min(time1.startTime, time2.startTime), endTime: Math.max(time1.endTime, time2.endTime)};
+	} else {
+		return false;
+	}
+}
+
+var time =   [
+    {startTime: 0,  endTime: 1},
+    {startTime: 3,  endTime: 5},
+    {startTime: 4,  endTime: 8},
+    {startTime: 10, endTime: 12},
+    {startTime: 9,  endTime: 10},
+];
+
+console.log(mergeTime(time));
+// [
+//     {startTime: 0, endTime: 1},
+//     {startTime: 3, endTime: 8},
+//     {startTime: 9, endTime: 12},
+// ]
+
+var time1 =   [
+    {startTime: 1, endTime: 10},
+    {startTime: 2, endTime: 6},
+    {startTime: 3, endTime: 5},
+    {startTime: 7, endTime: 9},
+];
+
+console.log(mergeTime(time1));
+//[{startTime: 1, endTime: 10}]
+
+//same problem O(nlgn) time and O(n) space.
+function mergeRanges(meetings) {
+
+    // create a deep copy of the meetings array
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Deep_Clone
+    var meetingsCopy = JSON.parse(JSON.stringify(meetings));
+    // sort by start time
+    var sortedMeetings = meetingsCopy.slice().sort(function(a, b) {
+        return a.startTime > b.startTime ? 1 : -1;
+    });
+
+    // initialize mergedMeetings with the earliest meeting
+    var mergedMeetings = [sortedMeetings[0]];
+
+    for (var i = 1; i < sortedMeetings.length; i++) {
+
+        var currentMeeting    = sortedMeetings[i];
+        var lastMergedMeeting = mergedMeetings[mergedMeetings.length - 1];
+
+        // if the current and last meetings overlap, use the latest end time
+        if (currentMeeting.startTime <= lastMergedMeeting.endTime) {
+            lastMergedMeeting.endTime = Math.max(lastMergedMeeting.endTime, currentMeeting.endTime);
+
+        // add the current meeting since it doesn't overlap
+        } else {
+            mergedMeetings.push(currentMeeting);
+        }
+    }
+
+    return mergedMeetings;
+}
+console.log(mergeRanges(time));
+console.log(mergeRanges(time1));
