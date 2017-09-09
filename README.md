@@ -8,4 +8,6 @@ All exercies are written in javascript
 Copy to console in your browser or node filename.js to see the codes running
 
 1. Chapter 2 : Insertion Sort & Merge Sort
-2. Greedy Algorithm : getProductsOfAllIntsExceptAtIndex()
+2. Greedy Algorithm : 
+	a. getMaxProfit(stockArray) 
+	b. getProductsOfAllIntsExceptAtIndex(intArray)
