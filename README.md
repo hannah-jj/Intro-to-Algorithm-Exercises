@@ -16,3 +16,6 @@ Copy to console in your browser or node filename.js to see the codes running
 	c. findMaxProduct(intArray) : find the maxProduct from 3 numbers in a given array
 
 	d. mergeTime(timeArray) : merge meeting time
+
+3. Recursion :
+	a. class fib : utilizing memoization to save recursive runs
