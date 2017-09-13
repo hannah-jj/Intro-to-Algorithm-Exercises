@@ -19,3 +19,4 @@ Copy to console in your browser or node filename.js to see the codes running
 
 3. Recursion :
 	a. class fib : utilizing memoization to save recursive runs
+	b. ascii_distance(str1, str2) : utilize Levenshtein Distance algorithm to find ascii code differences between two strings
