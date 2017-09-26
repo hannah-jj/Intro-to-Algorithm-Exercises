@@ -22,3 +22,5 @@ Copy to console in your browser or node filename.js to see the codes running
 	b. ascii_distance(str1, str2) : utilize Levenshtein Distance algorithm to find ascii code differences between two strings
 
 4.	Intersection: Finding Intersection between two rectangles
+
+5. 	Temperarture Tracker : track temperature, utilize class method to track min, max, mean & mode
