@@ -24,3 +24,8 @@ Copy to console in your browser or node filename.js to see the codes running
 4.	Intersection: Finding Intersection between two rectangles
 
 5. 	Temperarture Tracker : track temperature, utilize class method to track min, max, mean & mode
+
+6. Binary Tree:
+	a. superbalanced - difference between the depths of any two leaf nodes is no greater than one.
+
+	b. binary search tree - check if a binary tree is a valide binary search tree

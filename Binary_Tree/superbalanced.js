@@ -25,7 +25,7 @@ BinaryTreeNode.prototype.insertRight = function(value) {
 //use depth-first approach to get to leaves before breadth-first
 
 function superBalance(tree) {
-	if ((tree.left === null && tree.right === null)){
+	if (!tree){
 		return true;
 	}
 	
@@ -35,7 +35,6 @@ function superBalance(tree) {
 	nodes.push([tree, 0]);
 
 	while (nodes.length){
-		console.log(nodes);
 		var nodePair = nodes.pop();
 		var node = nodePair[0];
 		var depth = nodePair[1];
@@ -45,7 +44,6 @@ function superBalance(tree) {
 			//this depth doesn't exist yet, push depth to the array
 			if (depths.indexOf(depth) <0 ){
 				depths.push(depth);
-				console.log(depths);
 
 				if ( (depths.length > 2) || (depths.length === 2 && Math.abs(depths[0] - depths[1]) > 1) ){
 
@@ -56,15 +54,10 @@ function superBalance(tree) {
 			//another node
 			if (node.left) {
 				nodes.push([node.left, depth + 1]);
-
-				console.log("found left node");
-				console.log(nodes);
 			}
 
 			if (node.right) {
 				nodes.push([node.right, depth + 1]);
-				console.log("found right node");
-				console.log(nodes);
 			}
 
 		}
@@ -78,13 +71,14 @@ function superBalance(tree) {
 var rootTree = new BinaryTreeNode(30);
 
 rootTree.insertRight(50);
-// rootTree.right.insertRight(60);
-// rootTree.right.right.insertRight(70);
+rootTree.right.insertRight(60);
+rootTree.right.right.insertRight(70);
+// rootTree.right.right.right.insertRight(70);
 
 rootTree.insertLeft(10);
 rootTree.left.insertRight(15);
-rootTree.left.right.insertRight(16)
-console.log(rootTree);
+// rootTree.left.right.insertRight(16)
+
 console.log(superBalance(rootTree));
 
 var rootTree2 = new BinaryTreeNode(70);
