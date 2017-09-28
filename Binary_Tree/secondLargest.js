@@ -33,8 +33,8 @@ function largest(tree){
 //otherwise the largest number in that left subtree is the second largest
 function secondLargest(treeRoot){
 	//at least two nodes (including parent node)
-	if (!treeRoot) {
-		return false
+	if (!treeRoot || (!treeRoot.right && !treeRoot.left)) {
+		return false;
 	}
 
 	//gase case 1
@@ -58,8 +58,8 @@ var rootTree = new BinaryTreeNode(30);
 
 rootTree.insertRight(50);
 rootTree.right.insertRight(60);
-rootTree.right.right.insertRight(70);
-rootTree.right.right.right.insertLeft(65);
+// rootTree.right.right.insertRight(70);
+// rootTree.right.right.right.insertLeft(65);
 
 rootTree.insertLeft(10);
 // rootTree.left.insertRight(20);

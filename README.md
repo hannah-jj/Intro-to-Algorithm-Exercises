@@ -29,3 +29,5 @@ Copy to console in your browser or node filename.js to see the codes running
 	a. superbalanced - difference between the depths of any two leaf nodes is no greater than one.
 
 	b. binary search tree - check if a binary tree is a valide binary search tree
+
+	c. find the 2nd largest element in a binary search tree.
