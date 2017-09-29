@@ -31,3 +31,6 @@ Copy to console in your browser or node filename.js to see the codes running
 	b. binary search tree - check if a binary tree is a valide binary search tree
 
 	c. find the 2nd largest element in a binary search tree.
+
+7. Trie:
+	a. Optimize space to store URLs.
