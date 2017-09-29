@@ -39,3 +39,6 @@ Copy to console in your browser or node filename.js to see the codes running
 
 7. Trie:
 	a. Optimize space to store URLs.
+
+8. Set:
+	a. find two integers sum up to a number in an array of numbers
