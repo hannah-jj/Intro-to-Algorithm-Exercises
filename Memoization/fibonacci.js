@@ -1,5 +1,7 @@
 // show nth fibonacci number
 //lots of duplicated calculations
+var nth = 10;
+
 function nthFib (n) {
 	if (n == 1 || n ==0){
 		return n;
@@ -7,6 +9,7 @@ function nthFib (n) {
 		return (nthFib(n-2) + nthFib(n-1));
 	}
 }
+console.log(nthFib(nth));
 
 //Memoization
 class Fib {
@@ -28,5 +31,24 @@ class Fib {
 }
 
 var fib = new Fib();
-fib.fibonacci(20);
-console.log(fib.memo);
+console.log(fib.fibonacci(nth));
+
+//bottom up approach without recursion
+//O(n) time and O(1) space
+function fibNth(n){
+	if (n == 0 || n == 1) return n;
+
+	var prev2 = 0;
+	var prev1 = 1;
+	var sum = 0;
+	var count = n;
+	while (count > 1) {
+		sum = prev1 + prev2;
+		prev2 = prev1;
+		prev1 = sum;
+		count --;
+	}
+	return sum;
+}
+
+console.log(fibNth(nth));
