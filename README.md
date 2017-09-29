@@ -8,6 +8,7 @@ All exercies are written in javascript
 Copy to console in your browser or node filename.js to see the codes running
 
 1. Chapter 2 : Insertion Sort & Merge Sort
+
 2. Greedy Algorithm : 
 	a. getMaxProfit(stockArray) : find the max profit given an array containing stock price from the day before
 
@@ -31,6 +32,10 @@ Copy to console in your browser or node filename.js to see the codes running
 	b. binary search tree - check if a binary tree is a valide binary search tree
 
 	c. find the 2nd largest element in a binary search tree.
+
+	d. binary search - find integer in a sorted array
+
+	e. binary search - find index of the rotating point in an array with words alphabetically sorted
 
 7. Trie:
 	a. Optimize space to store URLs.
