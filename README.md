@@ -45,3 +45,6 @@ Copy to console in your browser or node filename.js to see the codes running
 
 9. Memoization:
 	a. fibonacci three ways!
+
+10. Stack:
+	a. optimize runtime for getMax() for a Stack
