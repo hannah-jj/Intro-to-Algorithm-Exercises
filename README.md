@@ -1,5 +1,6 @@
 # Intro-to-Algorithm-Exercises
 Implementing algorithms in the book of "Introduction to Algorithms" 3rd ed
+& various technical interview questions
 
 # Various Interview Questions Exercise
 
