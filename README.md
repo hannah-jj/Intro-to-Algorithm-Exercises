@@ -49,3 +49,7 @@ Copy to console in your browser or node filename.js to see the codes running
 
 10. Stack:
 	a. optimize runtime for getMax() for a Stack
+
+11. Prime Number:
+	a. testing isPrime for every number
+	b. find prime number using Sieve of Eratosthenes
