@@ -54,3 +54,9 @@ Copy to console in your browser or node filename.js to see the codes running
 11. Prime Number:
 	a. testing isPrime for every number
 	b. find prime number using Sieve of Eratosthenes
+
+12. bit:
+	a. find unique number or letter using bit wise calculation
+
+13. Linked List:
+	a. fastest way to delete a node in a singly linked list given only the node.
