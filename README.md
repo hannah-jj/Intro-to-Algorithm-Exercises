@@ -47,8 +47,9 @@ Copy to console in your browser or node filename.js to see the codes running
 9. Memoization:
 	a. fibonacci three ways!
 
-10. Stack:
+10. Stack & Queue:
 	a. optimize runtime for getMax() for a Stack
+	b. construct a queue from two stacks
 
 11. Prime Number:
 	a. testing isPrime for every number
