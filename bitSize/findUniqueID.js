@@ -1,3 +1,4 @@
+//#21
 //given an array of interger numbers with one of the number being unique
 //find the unique number
 //utilize bitwise calculation XOR

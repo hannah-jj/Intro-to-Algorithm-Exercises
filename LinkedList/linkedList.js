@@ -1,3 +1,7 @@
+//#22
+//delete a node in singly linked list
+//O(1) time
+
 function LinkedListNode(value) {
     this.value = value;
     this.next = null;

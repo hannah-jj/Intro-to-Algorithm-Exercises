@@ -60,3 +60,5 @@ Copy to console in your browser or node filename.js to see the codes running
 
 13. Linked List:
 	a. fastest way to delete a node in a singly linked list given only the node.
+
+	b. detect if a linked list has a cycle
