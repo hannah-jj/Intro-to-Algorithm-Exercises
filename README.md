@@ -64,3 +64,6 @@ Copy to console in your browser or node filename.js to see the codes running
 	b. detect if a linked list has a cycle
 
 	c. reverse a linked-list in place
+
+	d. navigate to nth to the last node in a linked list
+
