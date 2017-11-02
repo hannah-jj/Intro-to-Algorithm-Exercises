@@ -50,6 +50,8 @@ Copy to console in your browser or node filename.js to see the codes running
 10. Stack & Queue:
 	a. optimize runtime for getMax() for a Stack
 	b. construct a queue from two stacks
+	c. finding closing parenthesis
+	d. validate brackets/braces/parenthesis
 
 11. Prime Number:
 	a. testing isPrime for every number
